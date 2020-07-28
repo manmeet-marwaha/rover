@@ -1,0 +1,26 @@
+PROTO walls [
+  field SFVec3f    translation  0 0 0
+  field SFRotation rotation     0 1 0 0
+
+]
+{
+  DEF WALL_1 Solid {
+  translation IS translation
+  rotation IS rotation
+  children [
+    DEF WALL_GEOMETRY Shape {
+      appearance PBRAppearance {
+        baseColor 0 0 1
+        roughness 0.5
+        metalness 0
+      }
+      geometry Box {
+        size 1 0.1 0.025
+      }
+    }
+  ]
+  name "solid(2)"
+  boundingObject USE WALL_GEOMETRY
+}
+
+}

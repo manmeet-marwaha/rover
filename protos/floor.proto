@@ -1,0 +1,7 @@
+PROTO floor [
+]
+{
+  Floor {
+  size 1 1
+}
+}
